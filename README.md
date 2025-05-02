@@ -13,7 +13,7 @@ A simple database to manage:
 - Attendees
 - Ticket sales
 
-### Question 2: Contact Book CRUD API (Python + MySQL)
+ Question 2: Contact Book CRUD API (Python + MySQL)
 A FastAPI-based application that allows you to:
 - Add, update, delete, and view contacts
 - Store contact names, emails, and phone numbers
@@ -24,12 +24,18 @@ How to Setup and Run
 
  Question 1 – SQL Only
 
-1. Open your MySQL client (like phpMyAdmin, MySQL Workbench, etc.)
-2. Run the `event_management.sql` file in the `question1-event-management/` folder
+1. Open your MySQL Workbench 
+2. Run the `event_management.sql` file
 3. It will create tables and insert sample data
 
  Question 2 – Contact Book API
 
+ How to Run the API
 1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+pip install fastapi uvicorn mysql-connector-python
+
+2. Create MySQL database:
+CREATE DATABASE contact_book;
+
+3. Run the API:
+uvicorn main:app --reload
